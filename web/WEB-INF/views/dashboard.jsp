@@ -31,7 +31,7 @@
         }
 
         #museumHeaderDiv {
-            width: 91px;
+            width: 100px;
             height: 41px;
             background-color: #AD142B;
             moz-border-radius: 0px;
@@ -42,17 +42,16 @@
         }
 
         .museumBtn {
-            width: 91px;
+            width: 100px;
             height: 41px;
             background: #AD142B;
             moz-border-radius: 0px;
         }
 
-        .museumBtn:hover {
-            width: 91px;
+        .museumBtnNoColor {
+            width: 100px;
             height: 41px;
-            background: #ffffff;
-            border: 1px solid #EAEAEA;
+            background: #EAEAEA;
             moz-border-radius: 0px;
         }
 
@@ -67,8 +66,86 @@
     <script>
 
         function onItemSelect(id) {
-            if () {
 
+            if (id == 'td_1') {
+                removeFirstRowCssClasses('td_1');
+            }
+
+            if (id == 'td_2') {
+                removeFirstRowCssClasses('td_2');
+            }
+
+            if (id == 'td_3') {
+                removeFirstRowCssClasses('td_3');
+            }
+
+            if (id == 'td_4') {
+                removeSecondRowCssClasses('td_4');
+            }
+
+            if (id == 'td_5') {
+                removeSecondRowCssClasses('td_5');
+            }
+
+            if (id == 'td_6') {
+                removeSecondRowCssClasses('td_6');
+            }
+
+        }
+
+        function removeFirstRowCssClasses(id) {
+            $("#td_1").removeClass('museumBtn');
+            $("#td_2").removeClass('museumBtn');
+            $("#td_3").removeClass('museumBtn');
+
+            $("#td_1").removeClass('museumBtnNoColor');
+            $("#td_2").removeClass('museumBtnNoColor');
+            $("#td_3").removeClass('museumBtnNoColor');
+
+            if (id == 'td_1') {
+                $("#td_1").addClass('museumBtn');
+            } else {
+                $("#td_1").addClass('museumBtnNoColor');
+            }
+
+            if (id == 'td_2') {
+                $("#td_2").addClass('museumBtn');
+            } else {
+                $("#td_2").addClass('museumBtnNoColor');
+            }
+
+            if (id == 'td_3') {
+                $("#td_3").addClass('museumBtn');
+            } else {
+                $("#td_3").addClass('museumBtnNoColor');
+            }
+        }
+
+        function removeSecondRowCssClasses(id) {
+            $("#td_4").removeClass('museumBtn');
+            $("#td_5").removeClass('museumBtn');
+            $("#td_6").removeClass('museumBtn');
+
+            $("#td_4").removeClass('museumBtnNoColor');
+            $("#td_5").removeClass('museumBtnNoColor');
+            $("#td_6").removeClass('museumBtnNoColor');
+
+            if (id == 'td_4') {
+                $("#td_4").addClass('museumBtn');
+            } else {
+                $("#td_4").addClass('museumBtnNoColor');
+            }
+
+            if (id == 'td_5') {
+                $("#td_5").addClass('museumBtn');
+            } else {
+                $("#td_5").addClass('museumBtnNoColor');
+            }
+
+            if (id == 'td_6') {
+                $("#td_6").addClass('museumBtn');
+            } else {
+                $("#td_6").addClass('museumBtnNoColor');
             }
         }
 
@@ -98,24 +175,101 @@
                 </tr>
                 <tr>
                     <td width="30%" >
-                        <div class="museumBtn" onclick="onItemSelect('td_1')"/>
+                        <div id="td_1" class="museumBtn" onclick="onItemSelect('td_1')"/>
                     </td>
                     <td width="30%" >
-                        <div class="museumBtn" onclick="onItemSelect('td_2')"/>
+                        <div id="td_2" class="museumBtnNoColor" onclick="onItemSelect('td_2')"/>
                     </td>
                     <td width="30%" >
-                        <div class="museumBtn" onclick="onItemSelect('td_3')"/>
+                        <div id="td_3" class="museumBtnNoColor" onclick="onItemSelect('td_3')"/>
                     </td>
                 </tr>
                 <tr>
                     <td width="30%">
-                        <div class="museumBtn" onclick="onItemSelect('td_4')"/>
+                        <div id="td_4" class="museumBtn" onclick="onItemSelect('td_4')"/>
                     </td>
                     <td width="30%">
-                        <div class="museumBtn" onclick="onItemSelect('td_5')"/>
+                        <div id="td_5" class="museumBtnNoColor" onclick="onItemSelect('td_5')"/>
                     </td>
                     <td width="30%">
-                        <div class="museumBtn" onclick="onItemSelect('td_6')"/>
+                        <div id="td_6" class="museumBtnNoColor" onclick="onItemSelect('td_6')"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
+                    </td>
+                    <td width="30%">
+                        <div class="museumBtnNoColor"/>
                     </td>
                 </tr>
             </table>
