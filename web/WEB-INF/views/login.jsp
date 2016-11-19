@@ -62,12 +62,14 @@
             background: url(resources/bg.png) no-repeat;
         }
 
-        input {
+        .textInput {
             border: 0;
             outline: 0;
-            background: transparent;
-            border: 2px solid black;
-            width: 20px;
+            width:100%;
+            height: 100%;
+            background: #EAEAEA;
+            font-size: 14pt;
+            font-family: 'MyWebFont';
         }
 
     </style>
@@ -75,7 +77,7 @@
 
         function openRegister() {
             $("#registerForm").dialog({
-                position: { my: "center", at: "top" },
+                //position: { my: "center", at: "top+150" },
                 modal: true,
                 resizable: false,
                 width: 468,
@@ -87,6 +89,11 @@
                     "Закрыть": function () {
                         $(this).dialog("close");
                     }
+                },
+                open: function(event, ui) {
+                    $(event.target).parent().css('position', 'fixed');
+                    $(event.target).parent().css('top', '20px');
+                    $(event.target).parent().css('left', '30%');
                 }
             });
 
@@ -95,7 +102,7 @@
 
         function loginDlg() {
             $("#loginForm").dialog({
-                position: { my: "center", at: "top" },
+                //position: { my: "center", at: "top" },
                 modal: true,
                 resizable: false,
                 width: 468,
@@ -107,6 +114,11 @@
                     "Закрыть": function () {
                         $(this).dialog("close");
                     }
+                },
+                open: function(event, ui) {
+                    $(event.target).parent().css('position', 'fixed');
+                    $(event.target).parent().css('top', '20px');
+                    $(event.target).parent().css('left', '30%');
                 }
             });
 
@@ -138,35 +150,62 @@
         </div>
     </div>
 </div>
-<div id="registerForm" title="Регистрация" style="display: none;">
+<div id="registerForm" title="Регистрация" style="display: none;margin-top: 20px">
     <form id="rgForm"  action="register" method="post">
-        <table>
+
+        <table width="100%" cellspacing="5px" style="margin-top: 45px">
             <tr>
-                <td colspan="2">
+                <td colspan="2" align="center">
                     <div id="titleDiv">
                         РЕГИСТРАЦИЯ
                     </div>
                 </td>
             </tr>
+        </table>
+        <table width="100%" cellspacing="5px" style="margin-top: 45px">
             <tr>
-                <td width="50%">
-                    <input type="text" id="name" name="name"/>
+                <td width="50%" height="45px" align="center">
+                    <input type="text" id="name" placeholder="Имя" name="name" class="textInput"/>
                 </td>
-                <td width="50%">
-                    <input type="text" id="surname" name="surname"/>
+                <td width="50%" height="45px" align="center">
+                    <input type="text" id="surname" placeholder="Фамилия" name="surname" class="textInput">
+                </td>
+            </tr>
+
+        </table>
+        <table width="100%" cellspacing="5px">
+            <tr>
+                <td width="10%" height="45px" align="left">
+                    <img src="<c:url value="/resources/profile.png"/>" class="textInput" style="width:45px;height: 45px"/>
+                </td>
+                <td width="90%" height="45px" align="center">
+                    <input type="text" id="login" name="login" placeholder="Имя пользователя" class="textInput"/>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellspacing="5px" style="margin-top: 45px">
+            <tr>
+                <td width="10%" height="45px" align="left">
+                    <img src="<c:url value="/resources/email.png"/>" class="textInput" style="width:45px;height: 45px"/>
+                </td>
+                <td width="90%" height="45px" align="center">
+                    <input type="text" id="email" name="email" placeholder="Почта" class="textInput"/>
                 </td>
             </tr>
             <tr>
-                <td width="20%">
-                    <img src=""/>
+                <td width="10%" height="45px" align="left">
+                    <img src="<c:url value="/resources/lock.png"/>" class="textInput" style="width:45px;height: 45px"/>
                 </td>
-                <td width="80%">
-                    <input type="password" name="password"/>
+                <td width="90%" height="45px" align="center">
+                    <input type="password" id="password" name="password" placeholder="Пароль" class="textInput"/>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <input type="submit" value="Войти"/>
+                <td width="10%" height="45px" align="left">
+                    <img src="<c:url value="/resources/lock.png"/>" class="textInput" style="width:45px;height: 45px"/>
+                </td>
+                <td width="90%" height="45px" align="center">
+                    <input type="password" id="passwordRepeat" name="password" placeholder="Повторите пароль" class="textInput"/>
                 </td>
             </tr>
         </table>
@@ -174,33 +213,30 @@
 </div>
 <div id="loginForm" title="Вход" style="display: none;">
     <form id="lgForm" action="checkAuth" method="post">
-        <table>
+        <table width="100%" cellspacing="5px" style="margin-top: 45px">
             <tr>
-                <td colspan="2">
+                <td colspan="2" align="center">
                     <div id="titleDiv">
-                        ВОЙТИ
+                        ВХОД
                     </div>
                 </td>
             </tr>
+        </table>
+        <table width="100%" cellspacing="5px" style="margin-top: 70px">
             <tr>
-                <td>
-                    Логин
+                <td width="10%" height="45px" align="left">
+                    <img src="<c:url value="/resources/profile.png"/>" class="textInput" style="width:45px;height: 45px"/>
                 </td>
-                <td>
-                    <input type="text" id="login" name="login"/>
+                <td width="90%" height="45px" align="center">
+                    <input type="text" id="login" name="login" placeholder="Имя пользователя" class="textInput"/>
                 </td>
             </tr>
             <tr>
-                <td>
-                    Пароль
+                <td width="10%" height="45px" align="left">
+                    <img src="<c:url value="/resources/lock.png"/>" class="textInput" style="width:45px;height: 45px"/>
                 </td>
-                <td>
-                    <input type="password" name="password"/>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="Войти"/>
+                <td width="90%" height="45px" align="center">
+                    <input type="password" id="password" name="password" placeholder="Пароль" class="textInput"/>
                 </td>
             </tr>
         </table>
