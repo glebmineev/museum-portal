@@ -152,7 +152,7 @@
     </script>
 </head>
 <body>
-<div style="overflow: scroll;height: 1750px;">
+<div style="overflow: scroll;height: 820px;">
     <div id="mainDiv">
         <div id="sprintDiv">
             <table cellspacing="5px">
@@ -275,6 +275,7 @@
             </table>
         </div>
     </div>
+    <a href="<c:out value="exposition"/>">Проектирование экспозиции</a>
 </div>
 </body>
 </html>

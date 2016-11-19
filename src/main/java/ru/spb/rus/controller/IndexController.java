@@ -81,4 +81,12 @@ class IndexController {
 
     }
 
+    @RequestMapping(value = "/exposition", method = RequestMethod.GET)
+    public ModelAndView exposition() {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("expozition");
+        return model;
+
+    }
+
 }
