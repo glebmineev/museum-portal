@@ -38,6 +38,16 @@ class IndexController {
 
     }
 
+    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+    public ModelAndView dashboard() {
+
+        ModelAndView model = new ModelAndView();
+        model.setViewName("dashboard");
+        //model.addObject("msg", name);
+
+        return model;
+
+    }
 
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public ModelAndView login() {
@@ -66,7 +76,7 @@ class IndexController {
         //} else {
         //    model.setViewName("login");
         //}
-        model.setViewName("main");
+        model.setViewName("dashboard");
         return model;
 
     }
