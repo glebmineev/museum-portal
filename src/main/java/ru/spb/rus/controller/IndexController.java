@@ -49,6 +49,17 @@ class IndexController {
 
     }
 
+    @RequestMapping(value = "/closeProj", method = RequestMethod.GET)
+    public ModelAndView closeProj() {
+
+        ModelAndView model = new ModelAndView();
+        model.setViewName("closeProj");
+        //model.addObject("msg", name);
+
+        return model;
+
+    }
+
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public ModelAndView login() {
 
