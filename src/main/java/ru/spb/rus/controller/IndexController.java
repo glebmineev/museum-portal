@@ -76,7 +76,7 @@ class IndexController {
         //} else {
         //    model.setViewName("login");
         //}
-        model.setViewName("dashboard");
+        model.setViewName("calendar");
         return model;
 
     }

@@ -59,7 +59,7 @@
             height: 100%;
             weight: 100%;
             border: 0 solid;
-            background: url(resources/bg.png) no-repeat;
+            background: url(resources/bg_2.jpg) no-repeat;
         }
 
         .textInput {

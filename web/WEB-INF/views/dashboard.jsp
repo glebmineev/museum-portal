@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Страница входа</title>
+    <title>Задачи</title>
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
@@ -152,7 +152,7 @@
     </script>
 </head>
 <body>
-<div style="overflow: scroll;height: 820px;">
+<div style="overflow: scroll;height: 900px;">
     <div id="mainDiv">
         <div id="sprintDiv">
             <table cellspacing="5px">
